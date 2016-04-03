@@ -1,0 +1,10 @@
+This script is used to generate the PDB and PSF for a DNA-grafted gold nanoparitcle
+
+Model originated reference:
+PRL 106, 215501 (2011)
+Nano Lett, 12, 2509-2514 (2012)
+
+usage:
+python gen_SingleAuNP.py 
+output:
+DNP.pdb, DNP.psf

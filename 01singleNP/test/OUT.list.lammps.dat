@@ -1,0 +1,35 @@
+#ATOM/BOND/ANGLE lists used for generating force field;
+
+pair_style      cg/cmm 15.0
+bond_style      harmonic
+angle_style     harmonic
+special_bonds  lj       0.0 0.0 1.0
+
+mass    1       #   NP
+mass    2       #   SS
+mass    3       #   LK
+mass    4       #   FL
+mass    5       #   C1
+mass    6       #   C2
+mass    7       #   C3
+
+bond_coeff    1     #   NP   SS
+bond_coeff    2     #   SS   LK
+bond_coeff    3     #   LK   C1
+bond_coeff    4     #   FL   C1
+bond_coeff    5     #   LK   FL
+bond_coeff    6     #   LK   LK
+bond_coeff    7     #   LK   C2
+bond_coeff    8     #   FL   C2
+bond_coeff    9     #   C1   C2
+bond_coeff   10     #   LK   C3
+bond_coeff   11     #   FL   C3
+bond_coeff   12     #   C2   C3
+
+angle_coeff    1     #   FL   C1   FL
+angle_coeff    2     #   SS   LK   LK
+angle_coeff    3     #   FL   C2   FL
+angle_coeff    4     #   LK   LK   LK
+angle_coeff    5     #   FL   C3   FL
+angle_coeff    6     #   C1   C2   C3
+angle_coeff    7     #   C2   C3   FL

@@ -1,0 +1,29 @@
+RESIDNAME C6E6
+NUMATOM   9
+NUMBOND   8
+NUMANGLE  7
+NUMIMPR   0
+ATOM       1      OA          OA        31.0337    0.00   0.0
+ATOM       2      E1          EO        44.0526    0.00   0.0
+ATOM       3      E2          EO        44.0526    0.00   0.0
+ATOM       4      E3          EO        44.0526    0.00   0.0
+ATOM       5      E4          EO        44.0526    0.00   0.0
+ATOM       6      E5          EO        44.0526    0.00   0.0
+ATOM       7      E6          EO        44.0526    0.00   0.0
+ATOM       8      C1          CM        42.0804    0.00   0.0
+ATOM       9      C2          CT2       29.0615    0.00   0.0
+BOND    1    1    1    2   OA  EO
+BOND    2    2    2    3   EO  EO
+BOND    3    2    3    4   EO  EO
+BOND    4    2    4    5   EO  EO
+BOND    5    2    5    6   EO  EO
+BOND    6    2    6    7   EO  EO
+BOND    7    3    7    8   EO  CM
+BOND    8    4    8    9   CM  CT2
+ANGLE   1    1    1    2   3   OA  EO  EO          
+ANGLE   2    2    2    3   4   EO  EO  EO
+ANGLE   3    2    3    4   5   EO  EO  EO
+ANGLE   4    2    4    5   6   EO  EO  EO
+ANGLE   5    2    5    6   7   EO  EO  E0
+ANGLE   6    3    6    7   6   EO  EO  CM
+ANGLE   7    4    7    8   9   EO  CM  CT2

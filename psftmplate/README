@@ -1,0 +1,8 @@
+This program is used to generate the 
+PSF file, lammps system data file,
+atom/bond/angle type list file, of the defined system;
+
+prepared files
+1. INPUT, contains the detailed information of the system;
+2. the residues' topology file;
+

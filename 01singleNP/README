@@ -1,0 +1,24 @@
+This script is used to generate the PDB and PSF for a DNA-grafted gold nanoparitcle
+
+Model originated reference:
+PRL 106, 215501 (2011)
+Nano Lett, 12, 2509-2514 (2012)
+
+usage:
+python gen_SingleAuNP.py 
+output:
+DNP.pdb, DNP.psf
+
+=========================
+version 2012-5-22
+gen_SingleAuNP.ad.py
+
+The atom name and atom type is written in characters (not numbers) in the "ad" version
+
+version 2012-6-29
+gen_SingleAuNP.ad.py
+
+1) The bond  between FL and LK is added;
+2) a new type SS (single strand DNA bead) is added 
+3) in the present version, the amount of single and double strand DNA bead should be larger than 1
+   i.e.,  Lsstrand + Lscpaer >= 1

@@ -1,0 +1,69 @@
+
+dimension       3
+units           lj
+atom_style      bond
+
+read_data       init.dat
+
+group c1 id <> 1 980
+group b1 id <> 981 1280
+
+group c2 id <> 1281 2260
+group b2 id <> 2261 2560
+
+group c3 id <> 2561 3540
+group b3 id <> 3541 3840
+
+group c4 id <> 3841 4820
+group b4 id <> 4821 5120
+
+group c5 id <> 5121 6100
+group b5 id <> 6101 6400
+
+group c6 id <> 6401 7380
+group b6 id <> 7381 7680
+
+group c7 id <> 7681 8660
+group b7 id <> 8661 8960
+
+group c8 id <> 8961 9940
+group b8 id <> 9941 10240
+
+group core union c1 c2 c3 c4 c5 c6 c7 c8
+group brush union b1 b2 b3 b4 b5 b6 b7 b8
+
+neighbor        2.0 bin
+neigh_modify    delay 10
+neigh_modify    exclude group c1 c1
+neigh_modify    exclude group c2 c2
+neigh_modify    exclude group c3 c3
+neigh_modify    exclude group c4 c4
+neigh_modify    exclude group c5 c5
+neigh_modify    exclude group c6 c6
+neigh_modify    exclude group c7 c7
+neigh_modify    exclude group c8 c8
+
+bond_style      fene
+bond_coeff      1 30.0 1.5 1.0 1.0
+special_bonds   fene
+
+# LJ potentials
+#pair_style      lj/cut 2.5
+#pair_coeff      * * 1.0 1.0 1.0 #no attr
+pair_style soft 2.5
+pair_coeff * * 10
+
+velocity        all create 0.6 4928459 dist gaussian
+fix             1 brush nve
+fix             2 brush langevin 1.0 1.0 1.0 654321
+fix             3 core rigid molecule langevin 1.0 2.0 1.0 428984
+
+timestep        0.005
+thermo          10
+
+dump            1 all atom 100 dbrush.lammpstrj
+dump_modify     1 sort id
+run             10000
+
+write_restart soft.restart
+

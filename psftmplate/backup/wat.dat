@@ -1,0 +1,6 @@
+RESIDNAME WAT 
+NUMATOM   1
+NUMBOND   0
+NUMANGLE  0
+NUMIMPR   0
+ATOM      1       W            W         54.0444    0.0   0.0
